@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Alinta.CodingTest</name>
+    </assembly>
+    <members>
+        <member name="M:Alinta.CodingTest.Controllers.CustomersController.GetCustomer(System.Int64)">
+            <summary>
+            Gets a customer with the given id
+            </summary>
+            <param name="id">id of the customer</param>
+            <returns>CustomerResponse</returns>
+            <response code="200">Returns the customer</response>
+            <response code="400">Customer could not be found</response>
+        </member>
+        <member name="M:Alinta.CodingTest.Controllers.CustomersController.SearchCustomers(System.String)">
+            <summary>
+            Searches for customers where the keyword matches the first name or the last name
+            </summary>
+            <param name="keyword">keyword to search in the first or last name</param>
+            <returns>CustomerResponse</returns>
+            <response code="200">Returns the customer</response>
+            <response code="204">No customers matched the keyword</response>
+        </member>
+        <member name="M:Alinta.CodingTest.Controllers.CustomersController.CreateCustomer(Alinta.CodingTest.Commands.CreateCustomerCommand)">
+            <summary>
+            Creates a new customer
+            </summary>
+            <response code="201">Customer created successfully</response>
+            <response code="400">Customer data is invalid</response>
+        </member>
+        <member name="M:Alinta.CodingTest.Controllers.CustomersController.Put(System.Int64,Alinta.CodingTest.Commands.UpdateCustomerCommand)">
+            <summary>
+            Updates a customer
+            </summary>
+            <response code="204">Customer updated successfully</response>
+            <response code="404">Customer could not be found</response>
+        </member>
+        <member name="M:Alinta.CodingTest.Controllers.CustomersController.Delete(System.Int32)">
+            <summary>
+            Deletes a customer
+            </summary>
+            <response code="204">Customer deleted successfully</response>
+            <response code="404">Customer could not be found</response>
+        </member>
+    </members>
+</doc>
